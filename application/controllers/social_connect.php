@@ -1,6 +1,6 @@
 <?php
 
-class Apps_security extends CI_Controller {
+class Social_connect extends CI_Controller {
 
         public function __construct()
         {
@@ -11,20 +11,13 @@ class Apps_security extends CI_Controller {
                 $this->load->library('session');                
         }
 
-        public function checkPinCode() { //retreive query result from getPinCode()
 
-        $sessionName = $this->session->userdata('username'); //get value in session
-        $this->load->model('account_db');
-        $data = $this->account_db->getPinCode($sessionName);
-        echo json_encode($data);       
-        }
-
-        public function getTrans() {
+        public function getPin() {
                 
                 $this->load->model('account_db');
-                $getTrans  = $this->account_db->add_trans();
+                $getPin  = $this->account_db->add_pin();
         
-                if(!empty($getTrans)){
+                if(!empty($getPin)){
                         return true;
                 }else{
                         return false;

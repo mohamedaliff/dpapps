@@ -79,6 +79,40 @@ class Account_Db extends CI_Model{
 
     }
 
+    public function add_trans()
+    {
+        $add_trans = array(
+            'temp_receiver_name' => $this->input->post('temp_receiver_name'),
+            //'temp_receiver_id' => $this->input->post('temp_receiver_id'),
+            'temp_via' => $this->input->post('temp_via'),
+            'temp_date' => $this->input->post('temp_date'),
+            'temp_type' => $this->input->post('temp_type'),
+            'temp_total' => $this->input->post('temp_total'),
+            //'temp_itemid' => $this->input->post('temp_itemid'),
+            'temp_message' => $this->input->post('temp_message'),
+            'temp_status' => $this->input->post('temp_status'),
+            'temp_sender' => $this->input->post('temp_sender')
+        );
+
+        $this->db->insert('apdb_temp', $add_trans);
+
+        //rest of your code
+    }
+
+    public function add_pin()
+    {
+        $add_pin = array(
+            'members_pin_no' => $this->input->post('members_pin_no')
+        );
+
+        $username = $this->input->post('members_username');
+
+        $this->db->where('members_username', $username);
+        $this->db->update('apdb_members', $add_pin);
+
+        //rest of your code
+    }
+
 
 
 
