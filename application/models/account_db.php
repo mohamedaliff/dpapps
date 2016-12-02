@@ -91,7 +91,9 @@ class Account_Db extends CI_Model{
             //'temp_itemid' => $this->input->post('temp_itemid'),
             'temp_message' => $this->input->post('temp_message'),
             'temp_status' => $this->input->post('temp_status'),
-            'temp_sender' => $this->input->post('temp_sender')
+            'temp_sender' => $this->input->post('temp_sender'),
+            'temp_itemid' => $this->input->post('temp_itemid'),
+            'temp_receiver_id' => $this->input->post('temp_receiver_id')
         );
 
         $this->db->insert('apdb_temp', $add_trans);

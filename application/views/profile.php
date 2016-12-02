@@ -62,11 +62,44 @@
 
 <div id="container">
 	<h1>CodeIgniter Sign In With Twitter</h1>
-
+	
 	<div id="body">
-		<p>Click Here To Sign In With Twitter</p>
-
-		<p><a href="<?php echo site_url('welcome/redirect');?>"><img src="./assets/sign_in.png"></a></p>
+		<p>My Profile</p>
+		
+		<table>
+			<tr>
+				<td>ID</td>
+				<td>:</td>
+				<td><?php echo $user_profile['id_str'];?></td>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td>:</td>
+				<td><?php echo $user_profile['name'];?></td>
+			</tr>
+			<tr>
+				<td>Screen Name</td>
+				<td>:</td>
+				<td><?php echo $user_profile['screen_name'];?></td>
+			</tr>
+			<tr>
+				<td>Location</td>
+				<td>:</td>
+				<td><?php echo $user_profile['location'];?></td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td>:</td>
+				<td><?php echo $user_profile['description'];?></td>
+			</tr>
+			<tr>
+				<td>Photo</td>
+				<td>:</td>
+				<td><img src="<?php echo str_replace('_normal', '',$user_profile['profile_image_url']);?>" width="200"></td>
+			</tr>
+		</table>
+		
+		<p><a href="<?php echo site_url('welcome/logout');?>">Sign Out</a></p>
 	
 	</div>
 
