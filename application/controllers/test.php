@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Test extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -25,8 +25,7 @@ class Welcome extends CI_Controller {
 		$ok = $this->twconnect->twredirect('welcome/callback');
 
 		if (!$ok) {
-			//echo 'Could not connect to Twitter. Refresh the page or try again later.';
-			redirect('http://localhost/scorpion/www/member/twitter_error.html');
+			echo 'Could not connect to Twitter. Refresh the page or try again later.';
 		}
 		
 	}
@@ -39,14 +38,15 @@ class Welcome extends CI_Controller {
 		}*/
 		
 		$ok = $this->twconnect->twprocess_callback();
-		echo json_encode($ok);
 		
-		if ( $ok ) { redirect('http://localhost/scorpion/www/index.html#'); }
-			else redirect ('welcome/failure');
-			
-			
+		
+		if ( $ok ) { //redirect('http://localhost/scorpion/www/member/test.html');
+		//redirect('http://localhost/scorpion/www/member/social_connect.html'); }
+		//	else redirect ('welcome/failure');
+			echo json_encode($ok);
+			redirect('http://localhost/scorpion/www/member/test.html');
 	//pass_url('member/social_connect.html');
-}
+}}
 
 
 	public function success() {
@@ -87,9 +87,8 @@ class Welcome extends CI_Controller {
 			redirect('welcome/profile');
 		}*/
 		
-		//echo '<p>Twitter connect failed</p>';
-		//echo '<p><a href="' . base_url() . 'welcome/logout">Try again!</a></p>';
-		redirect('http://localhost/scorpion/www/member/twitter_error.html');
+		echo '<p>Twitter connect failed</p>';
+		echo '<p><a href="' . base_url() . 'welcome/logout">Try again!</a></p>';
 	}
 	
 	public function profile(){

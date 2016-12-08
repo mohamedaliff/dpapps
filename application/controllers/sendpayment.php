@@ -32,6 +32,7 @@ class Sendpayment extends CI_Controller {
         $sessionName = $this->session->userdata('username'); //get value in session
         $this->load->model('account_db');
         $data['results'] = $this->account_db->getSilverList($sessionName);
+        //echo gettype($data);
         echo json_encode($data);   
         }
 
