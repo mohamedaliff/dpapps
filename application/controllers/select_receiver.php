@@ -15,18 +15,26 @@ class Select_receiver extends CI_Controller
     
     public function getTwtFollower()
     {
+
+        $sess_token = $this->session->userdata['tw_access_token']['oauth_token'];
+        $sess_token_secret = $this->session->userdata['tw_access_token']['oauth_token_secret'];
+        $screenname = $this->session->userdata['tw_access_token']['screen_name'];
+
+        //echo json_encode($sess_token_secret);
         
         /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
         $settings = array(
-            'oauth_access_token' => "803453626354044928-Hr1BXc3n7UGmEFPLGfThNKP65pPHkeO",
-            'oauth_access_token_secret' => "ekbEmx6YxLKAxDdvMn6hQ6xjvw15OQkO0RHms0afoh0Ju",
-            'consumer_key' => "Q5qQsVJdJagDjPznJIY4SUbHc",
-            'consumer_secret' => "wJ0nGYIBn5gE7C0YS7nOVMJjcFjKHedibWr3QoSjte0c1OvAOk"
+            'oauth_access_token' => $sess_token,
+            'oauth_access_token_secret' => $sess_token_secret,
+            'consumer_key' => "jMw4oy0jXlWoStF21H8emTamJ",
+            'consumer_secret' => "IPPPPcdUyJIAt5NRH5c3TeP03oSJELMRKT7X69fhqAwqhxURo7"
         );
+
+       //echo json_encode($screenname);
         
 
         $url           = 'https://api.twitter.com/1.1/followers/ids.json';
-        $getfield      = '?screen_name=sangwira91&skip_status=true&include_user_entities=false';
+        $getfield      = '?screen_name='.$screenname.'&skip_status=true&include_user_entities=false';
         $requestMethod = 'GET';
         $twitter       = new TwitterAPIExchange($settings);
         $fid           = $twitter->setGetfield($getfield)->buildOauth($url, $requestMethod)->performRequest();
