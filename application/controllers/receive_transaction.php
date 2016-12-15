@@ -60,5 +60,41 @@ class Receive_transaction extends CI_Controller {
       }
    }
 
+   public function changeOwnerSilver() {
+
+      $this->load->model('account_db');
+
+      if ($query = $this->account_db->changeOwnerSilver()) {
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
+
+   public function changeOwnerGold() {
+
+      $this->load->model('account_db');
+
+      if ($query = $this->account_db->changeOwnerGold()) {
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
+
+   public function transferMoney() {
+
+      $this->load->model('account_db');
+
+      if ($query = $this->account_db->transferMoney()) {
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
+
 }
 
