@@ -93,7 +93,8 @@ class Account_Db extends CI_Model{
             'temp_status' => $this->input->post('temp_status'),
             'temp_sender' => $this->input->post('temp_sender'),
             'temp_itemid' => $this->input->post('temp_itemid'),
-            'temp_receiver_id' => $this->input->post('temp_receiver_id')
+            'temp_receiver_id' => $this->input->post('temp_receiver_id'),
+            'temp_unique' => $this->input->post('temp_unique')
         );
 
         $this->db->insert('apdb_temp', $add_trans);
@@ -114,6 +115,39 @@ class Account_Db extends CI_Model{
 
         //rest of your code
     }
+
+    public function getTransDetail($urlId){ //retreive variable from controller and select by usersession
+         
+        $query=$this->db->query("SELECT * FROM apdb_temp WHERE temp_unique='" . $urlId . "'");
+        return $query->result();
+        if ($query->num_rows() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+      
+    }
+
+    public function getLogin($username,$password){ //retreive variable from controller and select by usersession
+         
+        $query=$this->db->query("SELECT * FROM apdb_members WHERE members_username='" . $username . "' AND members_password='". $password ."'");
+        return $query->result();
+        if ($query->num_rows() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+      
+    }
+
+    public function acceptTrans(){
+            $update_trans = array(
+                'temp_status' => $this->input->post('temp_status')
+            );
+            $id = $this->input->post('temp_id');
+            $this->db->where('temp_id', $id);
+            $this->db->update('apdb_temp', $update_trans);
+        }
 
 
 

@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
 class Social_connect extends CI_Controller {
 
         public function __construct()
