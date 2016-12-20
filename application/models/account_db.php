@@ -201,6 +201,45 @@ class Account_Db extends CI_Model{
 
         }
 
+        public function getHistory($sessionName) {
+
+
+        $query=$this->db->query("SELECT * FROM apdb_temp WHERE temp_sender=" . "'" . $sessionName . "'");
+        return $query->result();
+        if ($query->num_rows() >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function getPending($sessionName) {
+
+
+        $query=$this->db->query("SELECT * FROM apdb_temp WHERE temp_sender=" . "'" . $sessionName . "'AND temp_status='Pending'");
+        return $query->result();
+        if ($query->num_rows() >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function getComplete($sessionName) {
+
+
+        $query=$this->db->query("SELECT * FROM apdb_temp WHERE temp_sender=" . "'" . $sessionName . "'AND temp_status='Complete'");
+        return $query->result();
+        if ($query->num_rows() >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 
 
 
