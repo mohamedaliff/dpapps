@@ -1,0 +1,585 @@
+.p_hack {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+html,body {
+
+    max-width: 110%;
+    overflow-x: none;
+    overflow-y:auto;    
+    background-image: url("../images/bg.png") ;
+    height:100%;
+    color: black;
+    
+    /*background: grey; /* For browsers that do not support gradients */
+    /*background: -webkit-linear-gradient(190deg, black, gray); /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(190deg, black, gray); /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(190deg, black, gray); /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(190deg, black, gray); /* Standard syntax (must be last) */
+    
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:120%;
+
+}
+.navbar-left {
+    float:left;
+    margin-left:15px;
+    padding:6px 10px;
+}
+
+.navcolor {
+    background-color: #252e33;
+    border: 0px;
+}
+
+.footer {
+    background-color: #252e33;
+    color: white;
+    border: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100% !important;
+}
+.btn-success{
+    width: 100%;
+}
+.btn-info{
+    width: 100%;
+}
+.btn-primary{
+    width: 100%;
+}
+.btn-warning{
+    width: 100%;
+}
+.btn-danger{
+    width: 100%;
+}
+.btn-custom{
+    width: 100%;
+    background-image:url('../images/btn.png');
+    border:solid 1px brown;
+}
+.btn-custom:focus,
+.btn-custom.focus {
+  background-image:url('../images/btn.png');
+  border-color: brown;
+}
+.btn-custom:hover {
+  background-image:url('../images/btn.png');
+  border-color: brown;
+}
+.btn-custom:active,
+.btn-custom.active,
+.open > .dropdown-toggle.btn-custom {
+  background-image:url('../images/btn.png');
+  border-color: brown;
+}
+
+.image-upload > input
+{
+    display: none;
+}
+.image-upload img
+{
+    cursor: pointer;
+}
+input:checked {
+    z-index: 2;
+    position: relative;
+}
+input:checked + img + img + label {
+    color: rgba(49, 179, 217, 1);
+    position: relative;
+    background: rgba(236, 245, 247, 1);
+    padding-left: 1em;
+    margin-left: -1em;
+    z-index: 1;
+}
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-image:url('../images/btn.png');
+    width: 100%;
+    border: 1px solid brown;
+}
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+input[type="radio"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    -ms-appearance: checkbox;     /* not currently supported */
+    -o-appearance: checkbox;      /* not currently supported */
+}
+.panel.panel-default{
+    background-color: rgba(235, 235, 235, 0.5);
+    border: 1px solid #ccc;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input {display:none;}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+
+    border-radius: 50%;
+}
+
+
+.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    background-image:url('../images/btn.png');
+    color: black;
+}
+/* Style the links inside the list items */
+.tab h3 {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* Change background color of links on hover */
+.tab h3:hover {
+    background-image:url('../images/tab.png');
+}
+/* Create an active/current tablink class */
+tab h3:focus, .active {
+    background-image:url('../images/tab.png');
+    color: black;
+}
+/* Style the tab content */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.swiper-container {
+    width: 100%;
+    height: 60%;
+
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+	width:100%;
+	height:100%;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#upload {
+-webkit-transition: width 2s ease;
+-moz-transition: width 2s ease;
+-o-transition: width 2s ease;
+transition: width 2s ease;
+display: inline-block;
+overflow: hidden;
+white-space: nowrap;
+background: white;
+vertical-align: middle;
+line-height: 30px;
+height: 30px;
+width: 0px;
+}
+#upload.in {
+width: 70%;
+height: 10%;
+
+}
+
+ul.tab {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    display: table; /* [1] */
+    table-layout: fixed; /* [2] */
+    width: 100%; /* [3] */;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+    display: table-cell; /* [4] */
+}
+
+/* Style the links inside the list items */
+ul.tab li a{
+    display: block; /* [5] */
+    color: black;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+     
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-image:url('../images/tab.png');
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-image:url('../images/tab.png');
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+a {
+    color: brown;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* make label bigger */
+label.password{
+	width:60px;
+	display: inline,!important;
+}
+/* keyboard label */
+label.keyboard{
+	width:80px;
+	display: inline,!important;
+}
+
+.image-upload > input
+   {
+   display: none;
+   }
+   .image-upload
+   {  
+   border-style: ridge;
+   border-width: 1px;
+   height: 70px;
+   border-color: lightgray;
+    }
+   .image-upload img
+   {  
+   cursor: pointer;
+   
+   }
+   .label-upload{
+    width: 120px;
+    height: 50px;
+    
+   }
+   .scroll-container{
+    height:270px;
+    overflow-y:scroll;
+    border-width: 1px;
+    border-color: black;
+    background-color: white;
+    position: relative;
+
+}
+.outer-container {
+    position: relative;
+    border:1px;
+    border-color:black;
+}
+
+.scrollable {
+    height: 270px;
+    overflow-y: auto;
+}
+
+.fixed-button {
+    position: absolute;
+    right: 1px;
+    top: 10px;
+}
+.fixed-textbox {
+    position: absolute;
+    right: 45px;
+    top: 10px;
+}
+.glyphicon.glyphicon-scale {
+    font-size: 200%;
+}
+.selected {
+    background-image:url('../images/btn.png');
+    border-color: brown;
+}
+.glyphicon-copy {
+    font-size: 40px;
+}
+.selected {
+    background-color: black;
+}
+.loaders {
+   position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}ansform: rotate(360deg); }
+}
+.animate
+{
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+.imgbg {
+    background-color: white;
+}
+.history{
+    /*background-color: black;*/
+    background-image:url('../images/btn.png');
+}
+.btn-menu {
+  border: 1px solid brown;
+  width: 100%;
+  background-image:url('../images/btn.png');
+}
+.btn-menu:focus,
+.btn-menu.focus {
+  color: black;
+  background-image:url('../images/btn.png');
+  border: 1px solid brown;
+
+}
+.btn-menu:hover {
+  color: black;
+  background-image:url('../images/btn.png');
+  border: 1px solid brown;
+  
+}
+.btn-menu:active,
+.btn-menu.active,
+.open > .dropdown-toggle.btn-info {
+  color: black;
+  background-image:url('../images/btn.png');
+  border: 1px solid brown;
+  
+}
+#touchloader
+{
+          background:grey;
+}
+.alert-custom-red {
+  color: white;
+  background-color: #d9534f;
+  border-color: brown;
+}
+.alert-custom-red hr {
+  border-top-color: brown;
+}
+.alert-custom-red .alert-link {
+  color: black;
+}
+.alert-custom-orange {
+  color: white;
+  background-color: #f0ad4e;
+  border-color: brown;
+}
+.alert-custom-orange hr {
+  border-top-color: brown;
+}
+.alert-custom-orange .alert-link {
+  color: black;
+}
+.alert-custom-blue {
+  color: white;
+  background-color: #286090;
+  border-color: brown;
+}
+.alert-custom-blue hr {
+  border-top-color: brown;
+}
+.alert-custom-blue .alert-link {
+  color: black;
+}
+.alert-custom-green {
+  color: white;
+  background-color: #5cb85c;
+  border-color: brown;
+}
+.alert-custom-green hr {
+  border-top-color: brown;
+}
+.alert-custom-green .alert-link {
+  color: black;
+}
+
+.modal-content {
+  background-image: url("../images/bg.png") ;
+}
