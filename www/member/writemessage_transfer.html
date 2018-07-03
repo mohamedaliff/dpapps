@@ -1,0 +1,59 @@
+<div id="main" class="container">
+    <h4 align="center" onclick="return refresh()" style="cursor: pointer;">
+            <b>Write Message</b>
+          </h4>
+<div class="row" >
+   <form role="form" name="myForm"  method="post">
+      <div class="form-group">
+         <div class="col-md-6 col-md-offset-3" >
+            <div class="panel panel-default">
+               <div class="panel-body">
+                  <image width="90px" height="100px"  class="img-circle" id="userpic"/>
+                  <span>&nbsp;via </span>
+                  <image width="10%"  id="usersocial" class="img-circle"/>
+                  <p></p>
+                  <label for="moneybalance">Receiver Name</label>
+                  <input type="text" name="receiver" id="receiver" class="form-control"   >
+                  <p></p>
+                  <label for="type">Asset Type</label>
+                  <input type="text" name="type" id="type" class="form-control"  readonly>
+                  <p></p>
+                  <label for="totalweight">Total Weight (Gram) / Amount (MYR)</label>
+                  <input type="text" name="totalweight" id="totalweight" class="form-control" readonly>
+                  <p></p>
+                  <textarea rows="4" cols="50" class="form-control" name="message" id="message" placeholder="Write your message here.."></textarea>
+                  <p></p>
+                  <img id="item" src="#" alt="your image" style="width:100px;height:100px;display:none;"/>
+                  <p></p>
+
+               <!--   <div class="image-upload">
+                     
+                        <label for="camera_src" class="label-upload">
+                        <img src="assets/images/camera.png" style="width:70px;height:70px;"  class="img-circle" alt="Camera"/>
+                        </label>
+                        <input type="file"  name="camera_src" id="camera_src"  accept="image/*" capture="camera" onchange="readURL(this);">
+                        
+                        <label for="gallery_src" class="label-upload">
+                        <img src="assets/images/gallery.png" style="width:70px;height:70px;"  class="img-circle" alt="Gallery"/>
+                        </label>
+                        <input type="file"  name="gallery_src" id="gallery_src"  accept="image/*" capture onchange="readURL(this);">
+                        
+                     
+                  </div>-->
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <div align="center">
+                    <!-- <input type="button" name="buttonNext" id="buttonNext" value="Next" class="btn myButton-blue" onclick="return validateForm()">-->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </form>
+</div>
+</div>
+<script src="assets/js/refresh.js"></script>
+<script src="assets/js/my_public_session.js"></script>
+<script src="assets/js/member/writemessage_transfer.js"></script>
+

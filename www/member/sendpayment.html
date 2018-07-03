@@ -1,0 +1,89 @@
+
+<div id="main" class="container">
+    <h4 align="center" onclick="return refresh()" style="cursor: pointer;">
+            <b>Select Assets</b>
+          </h4>
+<div class="row" >
+    <form role="form" name="myForm" method="post">
+        <div class="form-group">
+            <div class="col-md-6 col-md-offset-3" >
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <image width="90px" height="100px"  class="img-circle" id="userpic"/>
+                        <span>&nbsp;via </span>
+                        <image width="10%"  id="usersocial" class="img-circle"/>
+                        <p></p>
+                        <label for="receiver">Receiver Name</label>
+                        <input type="text" name="receiver" id="receiver" class="form-control" readonly>
+                        <p></p>
+                        <label for="type">Item Type</label>
+                        <select id="type" name="type" class="form-control">
+                            <option value="" disabled selected style="display: none;">Please select type</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Money">Money</option>
+                        </select>
+                        <p></p>
+                        <div class="outer-container">
+                        <div class="scrollable">
+                            
+                        
+                        <div class="hidden isgold">
+                            
+                            <div id="loaders"></div>
+                            
+                            <p></p>
+                            <fieldset>
+                                <table border="0" width="100%" class="table table-condensed" id="fgold">
+                                    
+                               
+                                    
+                                </table>
+                            </fieldset>
+                        </div>
+
+                       
+                        <div id="cbsilver" class="hidden issilver">
+                            
+                            <div id="loaders"></div>
+                            <p></p>
+                            <fieldset>
+                                <table border="0" width="100%" class="table table-condensed" id="fsilver">
+                                    </table>
+                            </fieldset>
+                        </div>
+
+                        <div class="hidden ismoney">
+                            <label for="moneybalance">Current Balance (MYR)</label>
+                            <input type="text" name="moneybalance" id="moneybalance" class="form-control" placeholder="Current Balance (MYR)" readonly >
+                            <p></p>
+                            <input type="text" name="amount" id="amount" class="form-control" placeholder="Amount to transfer (MYR)">
+                        </div>
+                    </div>
+                </div>
+
+                        <p></p>
+                        <p></p>
+                        <div align="center">
+                           <!-- <input type="button" name="buttonNext" id="buttonNext" value="Next" class="btn myButton-blue" onclick="return validateForm()">-->
+                        <p></p>
+                        
+                        </div>
+                        <div id="test"></div>
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+<!-- start controller jquery -->
+<script src="assets/js/my_public_session.js"></script>
+<script src="assets/js/member/sendpayment.js"></script>
+<script src="assets/js/refresh.js"></script>
+<!-- end controller jquery -->
+
+

@@ -1,0 +1,126 @@
+<div class="container">
+
+          <h4 align="center" onclick="return refresh()" style="cursor: pointer;">
+            <b>Transaction History</b>
+          </h4>
+
+
+    <ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'All')" id="defaultOpen">All</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Pending')">Pending</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Complete')">Complete</a></li>
+</ul>
+
+<div id="All" class="tabcontent">
+  
+  <p>  <div class="row" >
+        <form role="form">
+            <div class="form-group">
+                <div class="col-md-6 col-md-offset-3" >
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                            <table class="table table-condensed table-reflow">
+                                <tr class="history">
+                                    <th>To</th>
+                                    <th>Via</th>
+                                    <th>Date</th>
+                                    <th>Asset</th>                                    
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tbody id="content">
+                                
+                            </tbody>
+                            </table>
+                            </div>							
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </p>
+</div>
+
+<div id="Pending" class="tabcontent">
+  <p>  <div class="row" >
+        <form role="form">
+            <div class="form-group">
+                <div class="col-md-6 col-md-offset-3" >
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                            <table class="table table-condensed table-reflow">
+                                <tr class="history">
+                                    <th>To</th>
+                                    <th>Via</th>
+                                    <th>Date</th>
+                                    <th>Asset</th>                                    
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tbody id="contentP">
+                                
+                            </tbody>
+                            </table>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </p>
+</div>
+<div id="Complete" class="tabcontent">
+  <p>  <div class="row" >
+        <form role="form">
+            <div class="form-group">
+                <div class="col-md-6 col-md-offset-3" >
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                            <table class="table table-condensed table-reflow">
+                                <tr class="history">
+                                    <th>To</th>
+                                    <th>Via</th>
+                                    <th>Date</th>
+                                    <th>Asset</th>                                    
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tbody id="contentC">
+                                
+                            </tbody>
+                            </table>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </p>
+</div>
+</div>
+<script src="assets/js/my_public_session.js"></script>
+<script src="assets/js/refresh.js"></script>
+<script src="assets/js/member/transaction_history.js"></script>
+<script>
+document.getElementById("defaultOpen").click();
+
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>

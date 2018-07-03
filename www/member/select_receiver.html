@@ -1,0 +1,128 @@
+<div class="container" id="main">
+    <div id="touchloader" style="text-align: center;display: none;">
+        Refreshing Page..
+    </div>
+        <div id="touchlist" style="position: relative;top:0px;">
+          <h4 align="center" onclick="return refresh()" style="cursor: pointer;">
+            <b>Select Receiver</b>
+          </h4>
+        </div>
+
+    <p></p>
+    <div class="row"  align="left">
+        <form role="form" name="myForm"  method="post">
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <ul class="tab">
+                                <li><a href="#" class="tablinks" onclick="openTab(event, 'A')"><img src="assets/images/twitter.png" width="40px"  class="img-rounder"/></a></li>
+                                <li><a href="#" class="tablinks" onclick="openTab(event, 'B')" ><img src="assets/images/fb.png" width="40px"  class="img-rounder"/></a></li>
+                                <li><a href="#" class="tablinks" onclick="openTab(event, 'C')" ><img src="assets/images/ws.png" width="40px"  class="img-rounder"/></a></li>
+
+                            </ul>
+                            <div class="input-group">
+                                <input type="text"  id="searchbox" class="form-control" placeholder="Search"/>
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </span>
+                            </div>
+                            <p></p>
+
+                            <div class="userselect">
+                                <div class="outer-container">
+                        <div class="scrollable">
+                                <div id="A" class="tabcontent a">
+                                    <div class="loaders"></div>
+                                    
+                                </div>
+                                <div id="B" class="tabcontent b">
+                                   <div class="loaders"></div>
+                                </div>
+                                <div id="C" class="tabcontent c">
+                                   <!-- <div class="chip">
+                                        <div class="radio" style="display: inline">
+                                        <label><input type="radio" name="user" value="Apiz Ftmk" id="user9"/></label>
+                                        </div>
+                                        <label for="receiver" ></label>
+                                        <div class="image1" style="display: inline">
+                                        <img src="assets/images/ws.png" id="usersocial9" name="usersocial" height="30px" width="30px"  class="img-circle"/>
+                                        </div>
+                                        <div class="image2" style="display: inline">
+                                        <img src="assets/images/dummyuser1.jpg" id="userpic9" name="userpic" width="20%"  class="img-circle"/>
+                                        </div>
+                                        <label for="user" class="name">&nbsp;Apiz Ftmk</label>
+                                    </div>
+                                    <p></p>
+                                    <div class="chip">
+                                        <div class="radio" style="display: inline">
+                                        <label><input type="radio" name="user" value="Hafizzudin" id="user10"/></label>
+                                        </div>
+                                        <label for="receiver" ></label>
+                                        <div class="image1" style="display: inline">
+                                        <img src="assets/images/ws.png" id="usersocial10" name="usersocial" height="30px" width="30px"  class="img-circle"/>
+                                        </div>
+                                        <div class="image2" style="display: inline">
+                                        <img src="assets/images/dummyuser2.jpg" id="userpic10" name="userpic" width="20%"  class="img-circle"/>
+                                        </div>
+                                        <label for="user" class="name">&nbsp;Hafizzudin</label>
+                                    </div>
+                                    <p></p>
+                                    <div class="chip">
+                                        <div class="radio" style="display: inline">
+                                        <label><input type="radio" name="user" value="Alip Rosli" id="user11"/></label>
+                                        </div>
+                                        <label for="receiver" ></label>
+                                        <div class="image1" style="display: inline">
+                                        <img src="assets/images/ws.png" id="usersocial11" name="usersocial" width="10%"  class="img-circle"/>
+                                         </div>
+                                        <div class="image2" style="display: inline">
+                                        <img src="assets/images/dummyuser3.jpg" id="userpic11" name="userpic" width="20%"  class="img-circle"/>
+                                        </div>
+                                        <label for="user" class="name">&nbsp;Alip Rosli</label>
+                                    </div>
+                                    <p></p>
+                                    <div class="chip">
+                                        <div class="radio" style="display: inline">
+                                        <label><input type="radio" name="user" value="Pern" id="user12"/></label>
+                                        </div>
+                                        <label for="receiver" ></label>
+                                        <div class="image1" style="display: inline">
+                                        <img src="assets/images/ws.png" id="usersocial12" name="usersocial" height="30px" width="30px"  class="img-circle"/>
+                                         </div>
+                                        <div class="image2" style="display: inline">
+                                        <img src="assets/images/dummyuser5.jpg" id="userpic12" name="userpic" width="20%"  class="img-circle"/>
+                                        </div>
+                                        <label for="user" class="name">&nbsp;Pern</label>
+                                    </div>
+                                </div>-->
+                                <h4>In construction..</h4>
+                            </div>
+                        </div>
+                        </div>
+                                </div>
+
+                        <div id="fb-root"></div>
+                        <!--end fb section -->
+                        
+
+                        <p>&nbsp;<p></p>
+                        <div align="center">
+                         <!--   <input type="button" name="buttonNext" id="buttonNext" value="Next" class="btn myButton-blue" onclick="return validateForm()">-->
+
+                        </div>
+                        
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script src="assets/js/my_public_session.js"></script>
+<script src="assets/js/member/select_receiver.js"></script>
+<script src="assets/js/refresh.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"/>
+
+

@@ -1,0 +1,78 @@
+<div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form role="form" class="form-group" style="">
+                <!-- username -->
+                <input type="text" id="user" class="form-control" placeholder="Username. (Exp: John13)" />
+                <br />
+                <!-- enmail -->
+                <input type="text" id="email" class="form-control" placeholder="E-Mail. (Exp: yourself@gmail.com)" />
+                <br />
+                <!-- phone no -->
+                <input type="text" id="phone" class="form-control" placeholder="Phone No. (Exp: 0199737578)" />
+            </form>
+            <center>
+                <button class="btn btn-success" id="btn_reg">Register</button>
+                </p>
+                <button class="btn btn-info" id="btn_reset">Reset</button>
+            </center>
+        </div>
+    </div>
+</div>
+
+<!-- start controller jquery -->
+<script>
+    $(document).ready(function () {
+
+        $("#btn_reset").click(function () {
+            $("#user").val("");
+            $("#email").val("");
+            $("#phone").val("");
+        });
+
+        $("#btn_reg").click(function () {
+            var user = $("#user").val();
+            var email = $("#email").val();
+            var phone = $("#phone").val();
+            var account_type = 1;
+
+            if (user == '' || email == '' || phone == '') {
+                msg_alert('Do not leave blank!', 4);
+                return;
+            }
+
+            $.ajax({
+                url: URL_SERVER + "login/daftar_members",
+                timeout: 10000,
+                method: "POST",
+                data: {
+                    me_username: user,
+                    me_email: email,
+                    me_whatsapp_no: phone,
+                    me_account_type: account_type
+                },
+                error: function (jqXHR) {
+                    if (jqXHR.status == 0) {
+                        msg_alert('Opss! Fail to connect,<br />please check your connection settings!!', 4);
+                    }
+                },
+                success: function () {
+                },
+                statusCode: {
+                    404: function () {
+                        msg_alert('Opss! Page not found!!', 4);
+                    }
+                }
+            }).done(function (data) {
+                var d = get_pecah(data);
+                if (d[0] == '1' || d[0] == 1) {
+                    msg_alert(d[1], 4);
+                } else {
+                    msg_alert('Register success. Please check your email for account verification.', 1);
+                }
+            });
+            msg_alert('Connecting ...', 2);
+        });
+    });
+</script>
+<!-- end controller jquery -->
